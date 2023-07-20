@@ -1,29 +1,39 @@
-1. Flask: This is the main framework used for building the website. It is used in all Python files.
+1. Exported Variables:
+   - `app`: The main Flask application instance, shared across all files.
+   - `db`: The SQLAlchemy database instance, shared across all files.
 
-2. SQLAlchemy: This is the ORM used for handling database operations. It is used in "models.py", "views.py", and "forms.py".
+2. Data Schemas:
+   - `User`: A schema for user data, used in `models.py`, `forms.py`, and `routes.py`.
+   - `Subscription`: A schema for subscription data, used in `models.py`, `forms.py`, and `routes.py`.
 
-3. Stripe: This is the payment gateway used. It is used in "stripe_keys.py", "stripe_webhook.py", "views.py", and "payment.html".
+3. ID Names of DOM Elements:
+   - `login-form`: Used in `login.html` and potentially in JavaScript functions.
+   - `register-form`: Used in `register.html` and potentially in JavaScript functions.
+   - `subscription-form`: Used in `subscription.html` and potentially in JavaScript functions.
 
-4. WTForms: This is used for form handling in Flask. It is used in "forms.py" and "views.py".
+4. Message Names:
+   - `login_error`: Used in `routes.py` and `login.html`.
+   - `register_success`: Used in `routes.py` and `register.html`.
+   - `subscription_success`: Used in `routes.py` and `subscription.html`.
 
-5. Alembic: This is used for database migration. It is used in all files in the "migrations" directory.
+5. Function Names:
+   - `login()`: Used in `routes.py` and `forms.py`.
+   - `register()`: Used in `routes.py` and `forms.py`.
+   - `create_subscription()`: Used in `routes.py`, `forms.py`, and `stripe_integration.py`.
+   - `update_subscription()`: Used in `routes.py`, `forms.py`, and `stripe_integration.py`.
 
-6. Jinja2: This is the template engine used by Flask. It is used in all HTML files in the "templates" directory.
+6. Stripe Integration:
+   - `STRIPE_SECRET_KEY`: Used in `stripe_integration.py` and `config.py`.
+   - `STRIPE_PUBLISHABLE_KEY`: Used in `stripe_integration.py` and `config.py`.
 
-7. CSS and JavaScript: These are used for styling and interactivity. They are used in "main.css", "main.js", and all HTML files.
+7. Test Functions:
+   - `test_login()`: Used in `test_routes.py` and `test_forms.py`.
+   - `test_register()`: Used in `test_routes.py` and `test_forms.py`.
+   - `test_create_subscription()`: Used in `test_routes.py`, `test_forms.py`, and `test_stripe_integration.py`.
+   - `test_update_subscription()`: Used in `test_routes.py`, `test_forms.py`, and `test_stripe_integration.py`.
 
-8. Flask-Mail: This is used for sending emails. It is used in "email.py".
-
-9. Flask-Login: This is used for handling user sessions. It is used in "views.py", "models.py", and "decorators.py".
-
-10. Shared Variables: "db" (database instance), "app" (Flask application instance), "login_manager" (Flask-Login instance), "mail" (Flask-Mail instance).
-
-11. Data Schemas: User, Subscription, and Payment schemas in "models.py".
-
-12. DOM Element IDs: "login-form", "register-form", "subscription-form", "payment-form", "profile-form" in respective HTML files.
-
-13. Message Names: "login-success", "register-success", "subscription-success", "payment-success", "profile-update-success" in respective Python and HTML files.
-
-14. Function Names: "login", "register", "subscribe", "make_payment", "update_profile" in "views.py" and "forms.py".
-
-15. Test Names: "test_basics", "test_user_model", "test_error_handling", "test_payment", "test_subscription" in respective test files.
+8. CSS Classes:
+   - `.techie`: Used in `main.css` and all HTML templates.
+   - `.sober`: Used in `main.css` and all HTML templates.
+   - `.minimalistic`: Used in `main.css` and all HTML templates.
+   - `.clean`: Used in `main.css` and all HTML templates.

@@ -1,0 +1,35 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="techie sober minimalistic clean">
+    <div class="container">
+        <h1>Welcome, {{ current_user.username }}</h1>
+        <h2>Your Subscriptions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Subscription Plan</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for subscription in subscriptions %}
+                <tr>
+                    <td>{{ subscription.doctor }}</td>
+                    <td>{{ subscription.plan }}</td>
+                    <td>{{ subscription.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+```
