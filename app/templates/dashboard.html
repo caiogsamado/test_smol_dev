@@ -1,0 +1,29 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ current_user.username }}</h1>
+        <div class="dashboard">
+            <h2>Your Subscriptions</h2>
+            {% for subscription in subscriptions %}
+                <div class="subscription">
+                    <h3>{{ subscription.name }}</h3>
+                    <p>{{ subscription.description }}</p>
+                    <p>Price: {{ subscription.price }}</p>
+                    <a href="{{ url_for('subscription', id=subscription.id) }}">Manage Subscription</a>
+                </div>
+            {% endfor %}
+            <a href="{{ url_for('new_subscription') }}" class="btn">Add New Subscription</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+```
