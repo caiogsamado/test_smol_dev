@@ -13,89 +13,70 @@ body {
     overflow: hidden;
 }
 
-header {
-    background: #50b3a2;
-    color: white;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
-}
-
-header a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header li {
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    margin: 0;
-}
-
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-
-header .highlight, header .current a {
-    color: #e8491d;
+.techie {
+    color: #2c3e50;
     font-weight: bold;
 }
 
-header a:hover {
-    color: #cccccc;
-    font-weight: bold;
+.sober {
+    color: #7f8c8d;
 }
 
-#showcase {
-    min-height: 400px;
-    background: url('../img/showcase.jpg') no-repeat 0 -400px;
-    text-align: center;
-    color: #ffffff;
+.minimalistic {
+    border: none;
+    outline: none;
+    background: none;
 }
 
-#showcase h1 {
-    margin-top: 100px;
-    font-size: 55px;
+.clean {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.minimalistic {
+    color: #2c3e50;
+    border: 1px solid #2c3e50;
+}
+
+button.clean {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form .form-group {
     margin-bottom: 10px;
 }
 
-#showcase p {
-    font-size: 20px;
+form .form-group label {
+    display: block;
 }
 
-footer {
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #e8491d;
-    text-align: center;
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    #sidebar h2,
-    #sidebar .quote input,
-    #main-col,
-    #sidebar {
-        float: none;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
+form .form-group input:focus,
+form .form-group textarea:focus {
+    border-color: #2c3e50;
+}
+
+form .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2c3e50;
 }

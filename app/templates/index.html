@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Subscription</title>
+    <title>Subscription Platform</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
-<body>
+<body class="techie sober minimalistic clean">
     <header>
-        <nav>
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Register</a>
-        </nav>
+        <h1>Welcome to the Subscription Platform</h1>
     </header>
     <main>
-        <h1>Welcome to our Healthcare Subscription Service</h1>
-        <p>Join us and make your patients more independent.</p>
-        <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+        <section>
+            <h2>For Doctors</h2>
+            <p>Build subscriptions for your patients.</p>
+            <a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a>
+        </section>
+        <section>
+            <h2>For Patients</h2>
+            <p>Manage your subscriptions.</p>
+            <a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a>
+        </section>
     </main>
     <footer>
-        <p>© 2022 Healthcare Subscription. All rights reserved.</p>
+        <p>© 2022 Subscription Platform. All rights reserved.</p>
     </footer>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
