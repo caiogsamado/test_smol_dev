@@ -1,39 +1,13 @@
-1. Exported Variables:
-   - `app`: The main Flask application instance, shared across all files.
-   - `db`: The SQLAlchemy database instance, shared across all files.
+The shared dependencies between the files "/workspaces/test_smol_dev/main.py", "/home/codespace/.local/lib/python3.10/site-packages/flask/__init__.py", and "/home/codespace/.local/lib/python3.10/site-packages/jinja2/__init__.py" are:
 
-2. Data Schemas:
-   - `User`: A schema for user data, used in `models.py`, `forms.py`, and `routes.py`.
-   - `Subscription`: A schema for subscription data, used in `models.py`, `forms.py`, and `routes.py`.
+1. Flask: This is a class imported from the flask module. It is used in the main.py file and defined in the flask/__init__.py file.
 
-3. ID Names of DOM Elements:
-   - `login-form`: Used in `login.html` and potentially in JavaScript functions.
-   - `register-form`: Used in `register.html` and potentially in JavaScript functions.
-   - `subscription-form`: Used in `subscription.html` and potentially in JavaScript functions.
+2. escape: This is a function imported from the jinja2 module. It is used in the flask/__init__.py file and defined in the jinja2/__init__.py file.
 
-4. Message Names:
-   - `login_error`: Used in `routes.py` and `login.html`.
-   - `register_success`: Used in `routes.py` and `register.html`.
-   - `subscription_success`: Used in `routes.py` and `subscription.html`.
+3. jinja2: This is a module that is imported in the flask/__init__.py file and is the parent module of the escape function.
 
-5. Function Names:
-   - `login()`: Used in `routes.py` and `forms.py`.
-   - `register()`: Used in `routes.py` and `forms.py`.
-   - `create_subscription()`: Used in `routes.py`, `forms.py`, and `stripe_integration.py`.
-   - `update_subscription()`: Used in `routes.py`, `forms.py`, and `stripe_integration.py`.
+4. ImportError: This is a built-in exception that is raised when an import statement has trouble successfully importing a module.
 
-6. Stripe Integration:
-   - `STRIPE_SECRET_KEY`: Used in `stripe_integration.py` and `config.py`.
-   - `STRIPE_PUBLISHABLE_KEY`: Used in `stripe_integration.py` and `config.py`.
+5. Traceback: This is a built-in module that is used for printing stack traces of Python programs. It is implicitly used when an error is raised.
 
-7. Test Functions:
-   - `test_login()`: Used in `test_routes.py` and `test_forms.py`.
-   - `test_register()`: Used in `test_routes.py` and `test_forms.py`.
-   - `test_create_subscription()`: Used in `test_routes.py`, `test_forms.py`, and `test_stripe_integration.py`.
-   - `test_update_subscription()`: Used in `test_routes.py`, `test_forms.py`, and `test_stripe_integration.py`.
-
-8. CSS Classes:
-   - `.techie`: Used in `main.css` and all HTML templates.
-   - `.sober`: Used in `main.css` and all HTML templates.
-   - `.minimalistic`: Used in `main.css` and all HTML templates.
-   - `.clean`: Used in `main.css` and all HTML templates.
+Please note that these are Python dependencies, not JavaScript, so there are no DOM elements, message names, or data schemas involved.
