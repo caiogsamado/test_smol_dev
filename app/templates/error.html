@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Oops, something went wrong!</h1>
+            <p class="text-center">We're sorry for the inconvenience. Our team has been notified and we're working to fix the issue.</p>
+            <p class="text-center">Please try again later or contact our support team if the problem persists.</p>
+            <div class="text-center">
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Return to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
